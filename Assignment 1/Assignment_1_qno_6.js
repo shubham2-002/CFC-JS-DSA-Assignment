@@ -1,4 +1,4 @@
-let num = 1234567;
+let num = 9735;
 let rev = 0;
 while(num!=0){
     let rem = num%10;
