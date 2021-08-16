@@ -1,18 +1,24 @@
-let arr = [2,4,5,6,7,1,8]
+function selectionSort(arr, ind = 0) {
+    if (ind == arr.length) {
+        return;
+    }
+    let maxInd = maxi(arr, ind);
+    [arr[ind], arr[maxInd]] = [arr[maxInd], arr[ind]];
+    selectionSort(arr, ind + 1);
+}
 
-
-1
-function maxindex(arr, i) {
+function maxi(arr, i) {
     if (i == arr.length) {
         return i - 1;
     }
-    if (arr[i] > arr[maxindex(arr, i + 1)]) {
+    if (arr[i] < arr[maxi(arr, i + 1)]) {
         return i;
     }
     else {
-       return maxindex(arr, i + 1)
+       return maxi(arr, i + 1);
     }
-
 }
-console.log(maxindex(arr,0))
-// console.log(maxindex(arr,0))
+let arr = [2,4,1,5,8,6]
+console.log(arr);
+selectionSort(arr)
+console.log(arr)
