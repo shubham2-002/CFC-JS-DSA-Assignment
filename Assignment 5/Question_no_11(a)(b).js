@@ -9,7 +9,7 @@ function nKnights(n){
 }
 
 function nKnightRes(n, matrix, row=0){
-    if(n===row){
+    if(row===n){
         for(let row of matrix){
             console.log(row);
         }
